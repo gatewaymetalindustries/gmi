@@ -1,1 +1,1 @@
-# gmi
+# gateway

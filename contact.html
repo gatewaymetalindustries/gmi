@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Gateway Metal Industries. Request a custom quote for wholesale tin packaging, industrial chemical containers, and food storage tins. Based in Taloja, Maharashtra.">
+<title>Contact Us | Request a Quote | Gateway Metal Industries</title>
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Gateway Metal Industries","url":"https://gatewaymetalindustries.com","logo":"https://gatewaymetalindustries.com/logo-square.png","contactPoint":{"@type":"ContactPoint","telephone":"+91-77384-86780","contactType":"sales","email":"sales@gatewaymetalindustries.com","availableLanguage":["English","Hindi"]}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* ── Contact-page exclusive styles ── */
+
+/* Cinematic hero — dark, editorial */
+.contact-hero {
+  padding: calc(var(--top-offset) + 80px) 5% 6rem;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+  min-height: 62svh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-hero-accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--red), var(--gold), var(--red), transparent);
+  background-size: 300% auto;
+  animation: gradientShift 4s linear infinite;
+}
+
+.contact-hero-noise {
+  position: absolute; inset: 0;
+  opacity: .04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+}
+
+.contact-hero-grid {
+  position: absolute; inset: 0;
+  opacity: .025;
+  background-image: repeating-linear-gradient(0deg,transparent,transparent 48px,#fff 48px,#fff 49px), repeating-linear-gradient(90deg,transparent,transparent 48px,#fff 48px,#fff 49px);
+  pointer-events: none;
+}
+
+/* Big watermark number */
+.contact-hero-watermark {
+  position: absolute;
+  right: -1%;
+  bottom: -8%;
+  font-family: var(--display);
+  font-size: clamp(12rem, 24vw, 22rem);
+  line-height: 1;
+  color: rgba(255,255,255,0.022);
+  letter-spacing: -.04em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.contact-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: end;
+}
+
+.contact-hero-left .section-tag { color: var(--gold); margin-bottom: 1.2rem; }
+
+.contact-hero-left h1 {
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  color: var(--white);
+  line-height: .9;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.contact-hero-left h1 em {
+  font-style: normal;
+  color: transparent;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.contact-hero-lead {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.82;
+  max-width: 480px;
+}
+
+.contact-hero-line {
+  width: 48px; height: 2px;
+  background: var(--gold);
+  margin: 2rem 0;
+}
+
+/* Right side: quick-contact cards */
+.contact-quick {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cq-item {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1.6rem 2rem;
+  background: rgba(255,255,255,0.02);
+  text-decoration: none;
+  transition: background .25s;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.cq-item:last-child { border-bottom: none; }
+
+.cq-item::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--red);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .3s var(--ease-out);
+}
+
+.cq-item:hover { background: rgba(255,255,255,0.05); }
+.cq-item:hover::after { transform: scaleY(1); }
+
+.cq-icon {
+  width: 46px; height: 46px;
+  border-radius: 3px;
+  border: 1px solid rgba(198,156,61,0.2);
+  background: rgba(198,156,61,0.06);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  transition: all .25s;
+}
+
+.cq-item:hover .cq-icon {
+  border-color: rgba(198,156,61,0.5);
+  background: rgba(198,156,61,0.12);
+}
+
+.cq-text { flex: 1; min-width: 0; }
+.cq-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.cq-value {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  display: block;
+  line-height: 1.4;
+}
+.cq-sub {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.25);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.cq-arrow {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.15);
+  transition: color .25s, transform .25s;
+  flex-shrink: 0;
+}
+.cq-item:hover .cq-arrow {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+/* ── MAIN CONTACT BODY ── */
+.contact-body {
+  background: var(--dark2);
+  padding: 7rem 5%;
+}
+
+.contact-body-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 7rem;
+  align-items: start;
+}
+
+/* LEFT: info panel */
+.contact-info { }
+
+.contact-info-header { margin-bottom: 3rem; }
+.contact-info-header .section-tag { color: var(--gold); }
+.contact-info-header h2 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--white);
+  line-height: .93;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.contact-info-header p {
+  color: #555;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+/* Detail rows */
+.c-detail-row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: padding .2s;
+}
+.c-detail-row:first-of-type { border-top: 1px solid rgba(255,255,255,0.05); }
+
+.c-detail-icon-box {
+  width: 44px; height: 44px;
+  border: 1px solid rgba(198,156,61,0.2);
+  background: rgba(198,156,61,0.05);
+  border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+  transition: all .25s;
+}
+.c-detail-row:hover .c-detail-icon-box {
+  border-color: rgba(198,156,61,0.5);
+  background: rgba(198,156,61,0.1);
+}
+
+.c-detail-body { flex: 1; }
+.c-detail-body strong {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+.c-detail-body span,
+.c-detail-body a {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  text-decoration: none;
+  display: block;
+  transition: color .2s;
+}
+.c-detail-body a:hover { color: var(--gold); }
+
+/* Map */
+.contact-map-wrap {
+  margin-top: 2.5rem;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.contact-map-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+  filter: grayscale(100%) invert(88%) contrast(80%);
+  transition: filter .4s;
+}
+.contact-map-wrap:hover iframe { filter: grayscale(20%) invert(0%) contrast(100%); }
+
+.contact-map-footer {
+  padding: 0.55rem 1rem;
+  background: rgba(255,255,255,0.025);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-map-footer span {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+}
+.contact-map-footer a {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color .2s;
+}
+.contact-map-footer a:hover { color: var(--gold-light); }
+
+/* Response promise strip */
+.contact-promise {
+  margin-top: 2.5rem;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid rgba(168,28,32,0.25);
+  background: rgba(168,28,32,0.05);
+  border-radius: 3px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-promise-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-promise-text strong {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.3rem;
+}
+.contact-promise-text span {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* ── RIGHT: FORM ── */
+.contact-form-panel {
+  background: rgba(255,255,255,0.022);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 6px;
+  border-top: 3px solid var(--red);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.form-panel-header {
+  padding: 2.5rem 3rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+
+.form-panel-header h3 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  color: var(--white);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.form-panel-header p {
+  font-size: 0.8rem;
+  color: #444;
+  line-height: 1.65;
+}
+
+/* Step tabs */
+.form-steps {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.form-step-tab {
+  flex: 1;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 2px solid transparent;
+  transition: all .25s;
+  cursor: default;
+}
+
+.form-step-tab.active {
+  border-bottom-color: var(--red);
+}
+
+.form-step-tab.done {
+  border-bottom-color: var(--gold);
+}
+
+.step-tab-num {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.25);
+  transition: all .25s;
+}
+
+.form-step-tab.active .step-tab-num {
+  border-color: var(--red);
+  background: rgba(168,28,32,0.15);
+  color: var(--red);
+}
+
+.form-step-tab.done .step-tab-num {
+  border-color: var(--gold);
+  background: rgba(198,156,61,0.12);
+  color: var(--gold);
+}
+
+.step-tab-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255,255,255,0.2);
+  transition: color .25s;
+}
+
+.form-step-tab.active .step-tab-label { color: rgba(255,255,255,0.55); }
+.form-step-tab.done .step-tab-label { color: var(--gold); }
+
+/* Form body */
+.form-body {
+  padding: 2.5rem 3rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-field label {
+  font-size: 0.63rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.form-field label .req { color: var(--red); font-size: 0.75rem; line-height: 1; }
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 3px;
+  padding: 0.85rem 1rem;
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 16px;
+  transition: border-color .2s, background .2s, box-shadow .2s;
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media (min-width: 761px) {
+  .form-field input, .form-field textarea, .form-field select { font-size: 0.88rem; }
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(255,255,255,0.15); }
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: rgba(198,156,61,0.5);
+  background: rgba(255,255,255,0.055);
+  box-shadow: 0 0 0 3px rgba(198,156,61,0.08);
+}
+
+.form-field.error input,
+.form-field.error textarea,
+.form-field.error select {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(168,28,32,0.1);
+}
+
+.error-msg {
+  font-size: 0.65rem;
+  color: var(--red);
+  margin-top: 0.15rem;
+  display: none;
+  letter-spacing: 0.05em;
+}
+.form-field.error .error-msg { display: block; }
+
+.form-field textarea { resize: vertical; min-height: 100px; }
+.form-field select option { background: #1a1a1a; color: var(--white); }
+
+/* Volume selector — custom pill buttons */
+.volume-select {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.vol-btn {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: transparent;
+  color: rgba(255,255,255,0.35);
+  border-radius: 2px;
+  font-family: var(--font);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all .2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.vol-btn:hover { border-color: rgba(255,255,255,0.18); color: rgba(255,255,255,0.6); }
+.vol-btn.selected {
+  background: rgba(198,156,61,0.12);
+  border-color: rgba(198,156,61,0.45);
+  color: var(--gold);
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 1.1rem;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .25s;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-submit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.07) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform .5s;
+}
+
+.btn-submit:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: var(--shadow-red); }
+.btn-submit:hover::before { transform: translateX(100%); }
+.btn-submit:active { transform: translateY(0); }
+.btn-submit.ready { background: #1a6e2e; }
+.btn-submit.ready:hover { background: #155626; }
+
+/* Send options that appear after validation */
+.send-options {
+  display: none;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.send-options.visible { display: flex; }
+
+.btn-wa-send {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  gap: 9px;
+  background: #25d366;
+  color: var(--white);
+  padding: .9rem;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all .22s;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px;
+  text-transform: uppercase;
+}
+.btn-wa-send:hover { background: #1da851; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+
+.btn-email-send {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.65);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: .9rem;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all .22s;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px;
+  text-transform: uppercase;
+}
+.btn-email-send:hover { background: rgba(255,255,255,0.1); color: var(--white); transform: translateY(-1px); }
+
+/* Success toast banner inside form */
+.form-success-banner {
+  display: none;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.4rem;
+  background: rgba(198,156,61,0.07);
+  border: 1px solid rgba(198,156,61,0.25);
+  border-radius: 3px;
+  margin-top: 0.8rem;
+}
+.form-success-banner.visible { display: flex; }
+.form-success-banner span {
+  font-size: 0.8rem;
+  color: var(--gold);
+  line-height: 1.5;
+}
+
+/* ── Toast popup ── */
+.toast-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  background: var(--dark3);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 3px solid var(--gold);
+  padding: 0.9rem 1.4rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .3s, transform .3s;
+  max-width: 280px;
+}
+.toast-popup.show { opacity: 1; transform: translateY(0); }
+
+/* ── FAQ / Trust strip ── */
+.contact-trust {
+  background: var(--dark);
+  padding: 5rem 5%;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.contact-trust-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.04);
+}
+
+.trust-item {
+  background: var(--dark);
+  padding: 2.5rem 2.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: background .3s;
+}
+
+.trust-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--red);
+  transition: width .4s var(--ease-out);
+}
+
+.trust-item:hover { background: rgba(255,255,255,0.02); }
+.trust-item:hover::after { width: 100%; }
+
+.trust-icon {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.trust-item h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.6rem;
+}
+
+.trust-item p {
+  font-size: 0.83rem;
+  color: #484848;
+  line-height: 1.72;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .contact-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-body-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+  .contact-trust-inner { grid-template-columns: 1fr 1fr; }
+  .form-body { padding: 2rem 2rem; }
+  .form-panel-header { padding: 2rem 2rem 1.5rem; }
+}
+
+@media (max-width: 760px) {
+  .contact-hero { min-height: auto; padding-bottom: 4rem; }
+  .contact-trust-inner { grid-template-columns: 1fr; }
+  .send-options { flex-direction: column; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-body { padding: 1.5rem; }
+  .form-panel-header { padding: 1.5rem 1.5rem 1.2rem; }
+  .form-steps { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<div class="toast-popup" id="toastPopup"></div>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+  <a href="index.html" class="mm-link">Home</a>
+  <a href="about.html" class="mm-link">About</a>
+  <a href="products.html" class="mm-link">Products</a>
+  <a href="contact.html" class="mm-link" style="color:var(--gold)">Contact Us</a>
+</div>
+
+<nav id="mainNav" role="navigation">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="index.html"><img src="logo.png" alt="Gateway Metal Industries" onerror="this.style.display='none';"></a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Precision Tin Fabrication</span><span class="dot">◆</span>
+    <span>FMCG &amp; Pharma</span><span class="dot">◆</span>
+    <span>Since 1975</span><span class="dot">◆</span>
+    <span>Food &amp; Spices Packaging</span><span class="dot">◆</span>
+    <span>Industrial Chemicals</span><span class="dot">◆</span>
+    <span>Worldwide Shipping</span><span class="dot">◆</span>
+    <span>24hr Response Guarantee</span><span class="dot">◆</span>
+    <span>Taloja, Maharashtra</span><span class="dot">◆</span>
+    <span>Precision Tin Fabrication</span><span class="dot">◆</span>
+    <span>FMCG &amp; Pharma</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="contact-hero">
+  <div class="contact-hero-accent" aria-hidden="true"></div>
+  <div class="contact-hero-noise" aria-hidden="true"></div>
+  <div class="contact-hero-grid" aria-hidden="true"></div>
+  <span class="contact-hero-watermark" aria-hidden="true">1975</span>
+
+  <div class="contact-hero-inner">
+
+    <div class="contact-hero-left reveal">
+      <p class="section-tag">Let's Build Something</p>
+      <h1>Partner<br>With<br><em>Us.</em></h1>
+      <div class="contact-hero-line"></div>
+      <p class="contact-hero-lead">Whether you need 500 units or 5 million, our team is ready to spec, prototype, and deliver the tin packaging your product deserves. We respond within 24 hours — guaranteed.</p>
+    </div>
+
+    <div class="reveal-right">
+      <div class="contact-quick">
+        <a href="tel:+917738486780" class="cq-item">
+          <div class="cq-icon">📞</div>
+          <div class="cq-text">
+            <span class="cq-label">Call Us</span>
+            <span class="cq-value">+91 77384 86780</span>
+            <span class="cq-sub">Mon – Sat, 9am – 6pm IST</span>
+          </div>
+          <span class="cq-arrow">→</span>
+        </a>
+        <a href="https://wa.me/917738486780" target="_blank" rel="noopener" class="cq-item">
+          <div class="cq-icon">💬</div>
+          <div class="cq-text">
+            <span class="cq-label">WhatsApp</span>
+            <span class="cq-value">Chat with our sales team</span>
+            <span class="cq-sub">Fastest response · Usually replies within hours</span>
+          </div>
+          <span class="cq-arrow">→</span>
+        </a>
+        <a href="mailto:sales@gatewaymetalindustries.com" class="cq-item">
+          <div class="cq-icon">✉️</div>
+          <div class="cq-text">
+            <span class="cq-label">Email</span>
+            <span class="cq-value">sales@gatewaymetalindustries.com</span>
+            <span class="cq-sub">For detailed specs &amp; quotes</span>
+          </div>
+          <span class="cq-arrow">→</span>
+        </a>
+        <div class="cq-item" style="cursor:default;">
+          <div class="cq-icon">📍</div>
+          <div class="cq-text">
+            <span class="cq-label">Visit Us</span>
+            <span class="cq-value">A87, Maharashtra Industrial Area</span>
+            <span class="cq-sub">Taloja, Panvel, Maharashtra 410208</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ═══════════ CONTACT BODY ═══════════ -->
+<section class="contact-body">
+  <div class="contact-body-inner">
+
+    <!-- LEFT: details + map -->
+    <div class="contact-info reveal-left">
+      <div class="contact-info-header">
+        <p class="section-tag">Get In Touch</p>
+        <h2>Send Us<br>An Inquiry</h2>
+        <p>Fill in the form and we'll get back to you with a tailored quote. The more detail you can share about your requirements, the faster we can help.</p>
+      </div>
+
+      <div class="c-detail-row">
+        <div class="c-detail-icon-box">📞</div>
+        <div class="c-detail-body">
+          <strong>Phone</strong>
+          <a href="tel:+917738486780">+91 77384 86780</a>
+        </div>
+      </div>
+
+      <div class="c-detail-row">
+        <div class="c-detail-icon-box">✉️</div>
+        <div class="c-detail-body">
+          <strong>Email</strong>
+          <a href="mailto:sales@gatewaymetalindustries.com">sales@gatewaymetalindustries.com</a>
+        </div>
+      </div>
+
+      <div class="c-detail-row">
+        <div class="c-detail-icon-box">📍</div>
+        <div class="c-detail-body">
+          <strong>Factory &amp; Headquarters</strong>
+          <span>A87, Maharashtra Industrial Area,<br>Taloja, Panvel, Maharashtra 410208</span>
+        </div>
+      </div>
+
+      <div class="contact-map-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q=Gateway+Metal+Industries,+A87,+Maharashtra+Industrial+Area,+Taloja,+Panvel,+Maharashtra+410208&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="180"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Gateway Metal Industries Location">
+        </iframe>
+        <div class="contact-map-footer">
+          <span>Taloja, Maharashtra</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Gateway+Metal+Industries+Taloja+Panvel" target="_blank" rel="noopener">Open in Maps →</a>
+        </div>
+      </div>
+
+      <div class="contact-promise">
+        <div class="contact-promise-icon">⚡</div>
+        <div class="contact-promise-text">
+          <strong>24-Hour Response Guarantee</strong>
+          <span>Every inquiry we receive gets a personal response within one business day. No auto-replies, no waiting rooms — you'll hear from a real person on our team.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: inquiry form -->
+    <div class="reveal-right">
+      <div class="contact-form-panel">
+
+        <div class="form-panel-header">
+          <h3>Send an Inquiry</h3>
+          <p>Tell us what you need — product type, dimensions, volumes, and any special requirements.</p>
+        </div>
+
+        <!-- Step progress indicator -->
+        <div class="form-steps" id="formSteps">
+          <div class="form-step-tab active" id="step-tab-1">
+            <div class="step-tab-num">01</div>
+            <span class="step-tab-label">Who you are</span>
+          </div>
+          <div class="form-step-tab" id="step-tab-2">
+            <div class="step-tab-num">02</div>
+            <span class="step-tab-label">Your need</span>
+          </div>
+          <div class="form-step-tab" id="step-tab-3">
+            <div class="step-tab-num">03</div>
+            <span class="step-tab-label">Send</span>
+          </div>
+        </div>
+
+        <div class="form-body">
+
+          <div class="form-row">
+            <div class="form-field" id="field-name">
+              <label for="f-name">Your Name <span class="req">*</span></label>
+              <input id="f-name" type="text" placeholder="Full name" autocomplete="name">
+              <span class="error-msg">Please enter your name</span>
+            </div>
+            <div class="form-field" id="field-company">
+              <label for="f-company">Company</label>
+              <input id="f-company" type="text" placeholder="Company name" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field" id="field-phone">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" type="tel" placeholder="+91..." autocomplete="tel" inputmode="tel">
+              <span class="error-msg">Please provide phone or email</span>
+            </div>
+            <div class="form-field" id="field-email">
+              <label for="f-email">Email</label>
+              <input id="f-email" type="email" placeholder="email@company.com" autocomplete="email" inputmode="email">
+              <span class="error-msg">Please enter a valid email</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="f-industry">Industry / Product Interest</label>
+            <select id="f-industry">
+              <option value="">Select your industry...</option>
+              <option>FMCG &amp; Food Packaging</option>
+              <option>Industrial Paints &amp; Adhesives</option>
+              <option>Industrial Dyes &amp; Chemicals</option>
+              <option>Spices &amp; Curry Powder</option>
+              <option>Pharma &amp; Healthcare</option>
+              <option>Custom Dimension Fabrication</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>Approximate Order Volume</label>
+            <div class="volume-select" id="volumeSelect">
+              <button class="vol-btn" type="button" data-val="Under 500 units">Under 500</button>
+              <button class="vol-btn" type="button" data-val="500–5,000 units">500–5K</button>
+              <button class="vol-btn" type="button" data-val="5,000–50,000 units">5K–50K</button>
+              <button class="vol-btn" type="button" data-val="50,000+ units">50K+</button>
+              <button class="vol-btn" type="button" data-val="Not sure yet">Not sure yet</button>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" placeholder="Describe your packaging requirement — dimensions, lid type, material thickness, printing needs, timeline..."></textarea>
+          </div>
+
+          <button type="button" class="btn-submit" id="submitBtn">
+            <span id="submitLabel">Prepare Inquiry</span>
+            <span>→</span>
+          </button>
+
+          <div class="form-success-banner" id="successBanner">
+            <span>✓ Inquiry ready — choose how you'd like to send it below.</span>
+          </div>
+
+          <div class="send-options" id="sendOptions">
+            <a href="#" class="btn-wa-send" id="waBtn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 32 32" width="16" height="16" fill="white"><path d="M16 2.67C8.63 2.67 2.67 8.63 2.67 16c0 2.37.62 4.6 1.7 6.5l-2.26 8.27 8.44-2.22A13.25 13.25 0 0016 29.33c7.37 0 13.33-5.96 13.33-13.33S23.37 2.67 16 2.67zM16 27.1a11.1 11.1 0 01-5.67-1.55l-.4-.24-4.21 1.11 1.13-4.1-.26-.43A11.1 11.1 0 014.88 16c0-6.14 5-11.12 11.12-11.12S27.12 9.86 27.12 16 22.14 27.1 16 27.1zm6.1-8.3c-.33-.17-1.97-.97-2.28-1.08-.3-.1-.53-.16-.76.17-.23.33-.86 1.08-1.06 1.3-.2.23-.4.26-.74.1-1.63-.8-2.8-1.74-3.86-3.6-.1-.17 0-.25.16-.42.15-.15.34-.39.5-.58.17-.2.23-.33.34-.56.1-.23.06-.43-.03-.6-.08-.17-.76-1.84-1.05-2.52-.28-.66-.56-.57-.76-.58h-.66c-.23 0-.6.08-.92.43-.33.35-1.25 1.22-1.25 2.98 0 1.76 1.28 3.46 1.46 3.7.16.23 2.53 3.86 6.13 5.41 2.45 1.06 3.32 1.15 4.38.96 1.05-.2 3.16-1.3 3.6-2.55.44-1.26.44-2.33.3-2.56-.12-.23-.46-.36-.8-.53z"/></svg>
+              WhatsApp
+            </a>
+            <a href="#" class="btn-email-send" id="emailBtn">
+              ✉ Email
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ TRUST STRIP ═══════════ -->
+<section class="contact-trust">
+  <div class="contact-trust-inner max-w">
+
+    <div class="trust-item reveal reveal-delay-1">
+      <span class="trust-icon"></span>
+      <h4>Confidential Business Handling</h4>
+      <p>All inquiries, specifications, and commercial details are handled with strict confidentiality and professional discretion.</p>
+    </div>
+
+    <div class="trust-item reveal reveal-delay-2">
+      <span class="trust-icon"></span>
+      <h4>Flexible Production Approach</h4>
+      <p>We support both initial sampling requirements and large-scale production, ensuring a smooth transition from development to volume.</p>
+    </div>
+
+    <div class="trust-item reveal reveal-delay-3">
+      <span class="trust-icon"></span>
+      <h4>Reliable Regional Distribution</h4>
+      <p>We serve clients across India and select international markets through a dependable and well-established supply network.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="logo.png" alt="Gateway Metal Industries" onerror="this.style.display='none';"></div>
+    <p class="footer-copy">© 2026 Gateway Metal Industries. All Rights Reserved.<br>Precision Tin Fabrication Since 1975</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">Company</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/917738486780" class="wa-btn" target="_blank" aria-label="Chat on WhatsApp">
+  <div class="wa-pulse"></div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28" fill="currentColor">
+    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.3c-32.6 0-64.6-8.8-92.6-25.4l-6.6-3.9-68.8 18 18.4-67.1-4.3-6.8c-18.2-28.9-27.8-62.4-27.8-96.2 0-103.1 84-187.1 187.3-187.1 50 0 96.9 19.5 132.3 54.8 35.4 35.3 54.8 82.3 54.8 132.4 0 103.2-84.1 187.1-187.3 187.3zm101.8-139.7c-5.6-2.8-33-16.3-38.1-18.1-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.4 18.1-17.7 21.8-3.3 3.7-6.5 4.2-12.1 1.4-5.6-2.8-23.5-8.7-44.8-27.8-16.5-14.8-27.6-33.1-30.9-38.6-3.3-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.6-6.5 8.4-9.8 2.8-3.3 3.7-5.6 5.6-9.3 1.9-3.7.9-7-5-12.6-5.6-5.6-12.5-31.5-17.2-43.1-4.5-11.3-9.1-9.8-12.5-9.9-3.3-.1-7.1-.1-10.9-.1-3.7 0-9.8 1.4-14.9 7-5.1 5.6-19.5 19.1-19.5 46.5s20 53.8 22.8 57.5c2.8 3.7 39.2 59.8 95 83.9 13.3 5.7 23.7 9.1 31.8 11.6 13.4 4.3 25.6 3.7 35.3 2.2 10.9-1.7 33-13.5 37.6-26.5 4.7-13 4.7-24.1 3.3-26.5-1.4-2.4-5.1-3.7-10.7-6.5z"/>
+  </svg>
+</a>
+
+<script>
+// Progress bar
+const prog = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  prog.style.width = (max > 0 ? (document.documentElement.scrollTop / max * 100) : 0) + '%';
+}, { passive: true });
+
+// Mobile menu
+const ham = document.getElementById('ham'), mobileMenu = document.getElementById('mobileMenu');
+let menuOpen = false;
+function openMenu() { menuOpen = true; mobileMenu.style.display = 'flex'; requestAnimationFrame(() => mobileMenu.classList.add('open')); ham.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeMenu() { menuOpen = false; mobileMenu.classList.remove('open'); ham.classList.remove('open'); document.body.style.overflow = ''; setTimeout(() => { if (!menuOpen) mobileMenu.style.display = 'none'; }, 400); }
+ham.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+document.getElementById('mobileClose').addEventListener('click', closeMenu);
+document.querySelectorAll('.mm-link').forEach(el => el.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) closeMenu(); });
+
+// Scroll reveal
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObserver.observe(el));
+
+// Toast
+function showToast(msg) {
+  const t = document.getElementById('toastPopup');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3800);
+}
+
+// Volume pill buttons
+let selectedVolume = '';
+document.querySelectorAll('.vol-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.vol-btn').forEach(b => b.classList.remove('selected'));
+    this.classList.add('selected');
+    selectedVolume = this.dataset.val;
+    updateStepTabs();
+  });
+});
+
+// Step tab visual progress
+function updateStepTabs() {
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const hasContact = phone || email;
+
+  const t1 = document.getElementById('step-tab-1');
+  const t2 = document.getElementById('step-tab-2');
+  const t3 = document.getElementById('step-tab-3');
+
+  if (name && hasContact) { t1.className = 'form-step-tab done'; } else { t1.className = 'form-step-tab active'; }
+
+  const industry = document.getElementById('f-industry').value;
+  const msg = document.getElementById('f-msg').value.trim();
+  if (industry || selectedVolume || msg) { t2.className = 'form-step-tab done'; } else if (name && hasContact) { t2.className = 'form-step-tab active'; } else { t2.className = 'form-step-tab'; }
+
+  const allDone = t1.classList.contains('done') && t2.classList.contains('done');
+  if (allDone) { t3.className = 'form-step-tab active'; } else { t3.className = 'form-step-tab'; }
+}
+
+['f-name','f-phone','f-email','f-industry','f-msg'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('input', updateStepTabs);
+});
+
+// Form submission
+document.getElementById('submitBtn').addEventListener('click', () => {
+  const nameEl = document.getElementById('f-name');
+  const phoneEl = document.getElementById('f-phone');
+  const emailEl = document.getElementById('f-email');
+
+  const name    = nameEl.value.trim();
+  const phone   = phoneEl.value.trim();
+  const email   = emailEl.value.trim();
+  const company = document.getElementById('f-company').value.trim();
+  const ind     = document.getElementById('f-industry').value;
+  const msg     = document.getElementById('f-msg').value.trim();
+
+  // Clear errors
+  document.querySelectorAll('.form-field').forEach(f => f.classList.remove('error'));
+  let valid = true;
+
+  if (!name) { document.getElementById('field-name').classList.add('error'); valid = false; }
+  if (!phone && !email) {
+    document.getElementById('field-phone').classList.add('error');
+    document.getElementById('field-email').classList.add('error');
+    valid = false;
+  }
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.getElementById('field-email').classList.add('error');
+    valid = false;
+  }
+
+  if (!valid) {
+    const firstErr = document.querySelector('.form-field.error input, .form-field.error select');
+    if (firstErr) firstErr.focus();
+    showToast('⚠ Please fill in the required fields.');
+    return;
+  }
+
+  // Build message
+  const volText = selectedVolume ? selectedVolume : '—';
+  const text = `Hello Gateway Metal Industries,\n\nI am interested in discussing a packaging requirement.\n\n*Name:* ${name}\n*Company:* ${company || '—'}\n*Phone:* ${phone || '—'}\n*Email:* ${email || '—'}\n*Industry:* ${ind || '—'}\n*Order Volume:* ${volText}\n*Message:* ${msg || '—'}\n\nPlease get in touch at your earliest convenience.`;
+
+  document.getElementById('waBtn').href = `https://wa.me/917738486780?text=${encodeURIComponent(text)}`;
+  document.getElementById('emailBtn').href = `mailto:sales@gatewaymetalindustries.com?subject=${encodeURIComponent('Packaging Inquiry — ' + name)}&body=${encodeURIComponent(text.replace(/\*/g, ''))}`;
+
+  // Show success state
+  const btn = document.getElementById('submitBtn');
+  btn.classList.add('ready');
+  document.getElementById('submitLabel').textContent = '✓ Inquiry Ready';
+
+  document.getElementById('successBanner').classList.add('visible');
+  document.getElementById('sendOptions').classList.add('visible');
+
+  // Mark step 3 done
+  document.getElementById('step-tab-3').className = 'form-step-tab done';
+
+  showToast('✓ Inquiry prepared — choose how to send below.');
+});
+</script>
+</body>
+</html>
