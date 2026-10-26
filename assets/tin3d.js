@@ -349,7 +349,7 @@ function init() {
     // keep the tin framed on narrow stages
     // on tall phone stages, pull back and sit the tin higher so the title block clears the dimensions
     const tall = W / Hh < 0.95;
-    camera.position.z = tall ? 18.5 : 15.5;
+    camera.position.z = tall ? (W < 420 ? 21 : 18.5) : 15.5;
     camera.lookAt(0, tall ? -1.1 : -0.15, 0);
     camera.updateProjectionMatrix();
     svg.setAttribute('viewBox', `0 0 ${W} ${Hh}`);
