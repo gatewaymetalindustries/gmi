@@ -1,827 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The story of Gateway Metal Industries — five decades of precision tin fabrication, family legacy, and uncompromising craft in Maharashtra, India.">
-<title>Our Heritage | Gateway Metal Industries</title>
-
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Gateway Metal Industries","url":"https://gatewaymetalindustries.com","logo":"https://gatewaymetalindustries.com/logo-square.png"}
-</script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Gateway Metal Industries · Making tins since 1975</title>
+<meta name="description" content="Founded in 1975 by Ismail Sulemanji Patrawala in Lower Parel, Mumbai. Now making tinplate containers at A87, MIDC Taloja, Navi Mumbai.">
+<link rel="canonical" href="https://gatewaymetalindustries.com/about.html">
+<meta name="theme-color" content="#F2F3F3">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gateway Metal Industries">
+<meta property="og:title" content="About Gateway Metal Industries · Making tins since 1975">
+<meta property="og:description" content="Founded in 1975 by Ismail Sulemanji Patrawala in Lower Parel, Mumbai. Now making tinplate containers at A87, MIDC Taloja, Navi Mumbai.">
+<meta property="og:image" content="https://gatewaymetalindustries.com/img/p/lg/2.1.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<style>
-/* ── About-page exclusive styles ── */
-
-/* Hero banner — cinematic dark with giant year watermark */
-.about-hero {
-  padding: calc(var(--top-offset) + 80px) 5% 7rem;
-  background: var(--dark);
-  position: relative;
-  overflow: hidden;
-  min-height: 70svh;
-  display: flex;
-  align-items: center;
-}
-
-.about-hero-year {
-  position: absolute;
-  right: -2%;
-  bottom: -4%;
-  font-family: var(--display);
-  font-size: clamp(14rem, 28vw, 26rem);
-  line-height: 1;
-  color: rgba(255,255,255,0.025);
-  letter-spacing: -.04em;
-  user-select: none;
-  pointer-events: none;
-}
-
-.about-hero-accent {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--red), var(--gold), var(--red), transparent);
-  background-size: 300% auto;
-  animation: gradientShift 4s linear infinite;
-}
-
-.about-hero-glow {
-  position: absolute;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(168,28,32,0.12) 0%, transparent 70%);
-  top: -100px; left: -100px;
-  pointer-events: none;
-}
-
-.about-hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
-
-.about-hero-inner .section-tag { color: var(--gold); margin-bottom: 1.2rem; }
-
-.about-hero-inner h1 {
-  font-family: var(--display);
-  font-size: clamp(3.2rem, 9vw, 7.5rem);
-  color: var(--white);
-  line-height: .92;
-  letter-spacing: .02em;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.about-hero-inner h1 em {
-  font-style: normal;
-  color: transparent;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: shimmer 4s linear infinite;
-}
-
-.about-hero-lead {
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  color: rgba(255,255,255,0.5);
-  line-height: 1.85;
-  max-width: 560px;
-  font-weight: 400;
-}
-
-.about-hero-line {
-  width: 60px;
-  height: 2px;
-  background: var(--gold);
-  margin: 2rem 0;
-}
-
-/* Founder section */
-.founder-section {
-  padding: 7rem 5%;
-  background: var(--light);
-}
-
-.founder-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 7rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.founder-portrait {
-  position: relative;
-}
-
-.founder-portrait-frame {
-  aspect-ratio: 3/4;
-  background: var(--dark3);
-  border-radius: 2px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.founder-portrait-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  opacity: 0;
-  transition: opacity .4s;
-}
-
-.founder-portrait-frame img.loaded { opacity: 1; }
-
-/* Placeholder when no image */
-.founder-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.founder-placeholder-year {
-  font-family: var(--display);
-  font-size: 6rem;
-  color: rgba(255,255,255,0.04);
-  line-height: 1;
-}
-
-.founder-placeholder-icon {
-  opacity: 0.15;
-}
-
-/* Gold accent bracket — top right of portrait */
-.founder-portrait-bracket {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 48px;
-  height: 48px;
-  border-top: 2px solid var(--gold);
-  border-right: 2px solid var(--gold);
-  opacity: 0.6;
-}
-
-.founder-portrait-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(13,13,13,0.92), transparent);
-  padding: 3rem 1.5rem 1.5rem;
-}
-
-.founder-portrait-label strong {
-  display: block;
-  font-family: var(--display);
-  font-size: 1.3rem;
-  color: var(--white);
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
-.founder-portrait-label span {
-  font-size: 0.68rem;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-  margin-top: 0.3rem;
-  display: block;
-}
-
-/* Founder text */
-.founder-text .section-tag { margin-bottom: 0.6rem; }
-
-.founder-text h2 {
-  font-family: var(--display);
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-  color: var(--dark);
-  line-height: .93;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  margin-bottom: 0;
-}
-
-.founder-divider {
-  width: 40px;
-  height: 2px;
-  background: var(--gold);
-  margin: 1.8rem 0;
-}
-
-.founder-text p {
-  color: #5a5a5a;
-  line-height: 1.88;
-  font-size: 0.93rem;
-}
-
-.founder-text p + p { margin-top: 1.1rem; }
-
-.founder-text blockquote {
-  border-left: 2px solid var(--red);
-  padding: 0.8rem 0 0.8rem 1.5rem;
-  margin: 2rem 0;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--dark);
-  line-height: 1.7;
-  font-weight: 500;
-}
-
-/* Timeline */
-.timeline-section {
-  padding: 7rem 5%;
-  background: var(--dark);
-  position: relative;
-  overflow: hidden;
-}
-
-.timeline-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 48px, rgba(255,255,255,0.012) 48px, rgba(255,255,255,0.012) 49px), repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(255,255,255,0.012) 48px, rgba(255,255,255,0.012) 49px);
-  pointer-events: none;
-}
-
-.timeline-header {
-  max-width: 1200px;
-  margin: 0 auto 5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: end;
-}
-
-.timeline-header .section-tag { color: var(--gold); }
-.timeline-header h2 { font-family: var(--display); font-size: clamp(2.6rem, 5vw, 4rem); color: var(--white); line-height: .93; text-transform: uppercase; }
-.timeline-header p { color: #555; font-size: 0.93rem; line-height: 1.8; align-self: end; }
-
-/* The actual timeline */
-.timeline {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
-
-/* Vertical spine */
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(198,156,61,0.25) 10%, rgba(198,156,61,0.25) 90%, transparent);
-  transform: translateX(-50%);
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 1fr 60px 1fr;
-  gap: 0;
-  margin-bottom: 4rem;
-  align-items: start;
-}
-
-.timeline-item:last-child { margin-bottom: 0; }
-
-.timeline-item-left { padding-right: 3rem; text-align: right; }
-.timeline-item-right { padding-left: 3rem; text-align: left; }
-
-/* Alternate: odd items = content left, even = content right */
-.timeline-item.right .timeline-item-left { order: 1; }
-.timeline-item.right .timeline-item-center { order: 2; }
-.timeline-item.right .timeline-item-right { order: 3; }
-
-.timeline-item.left .timeline-item-right { visibility: hidden; }
-.timeline-item.right .timeline-item-left { visibility: hidden; }
-
-.timeline-item-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  position: relative;
-}
-
-.timeline-node {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--dark);
-  border: 2px solid var(--gold);
-  flex-shrink: 0;
-  position: relative;
-  z-index: 2;
-  transition: all .3s;
-  margin-top: 8px;
-}
-
-.timeline-item:hover .timeline-node {
-  background: var(--gold);
-  box-shadow: 0 0 20px rgba(198,156,61,0.5);
-}
-
-.timeline-content {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 3px;
-  padding: 2rem 2rem 1.8rem;
-  transition: all .3s;
-  position: relative;
-}
-
-.timeline-content::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: transparent;
-  transition: background .3s;
-  border-radius: 3px 3px 0 0;
-}
-
-.timeline-item:hover .timeline-content {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(198,156,61,0.2);
-}
-
-.timeline-item:hover .timeline-content::before {
-  background: var(--red);
-}
-
-.timeline-year {
-  font-family: var(--display);
-  font-size: 2.8rem;
-  color: rgba(255,255,255,0.06);
-  line-height: 1;
-  margin-bottom: 0.6rem;
-  letter-spacing: -.02em;
-  transition: color .3s;
-}
-
-.timeline-item:hover .timeline-year { color: rgba(198,156,61,0.15); }
-
-.timeline-title {
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--gold);
-  margin-bottom: 0.7rem;
-}
-
-.timeline-body {
-  font-size: 0.88rem;
-  color: #666;
-  line-height: 1.78;
-}
-
-/* Values section */
-.values-section {
-  padding: 7rem 5%;
-  background: var(--white);
-}
-
-.values-header {
-  max-width: 1200px;
-  margin: 0 auto 4.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: end;
-}
-
-.values-header h2 { font-family: var(--display); font-size: clamp(2.6rem, 5vw, 4rem); color: var(--dark); line-height: .93; text-transform: uppercase; }
-.values-header p { color: #777; font-size: 0.93rem; line-height: 1.8; }
-
-.values-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: #e8e8e8;
-}
-
-.value-card {
-  background: var(--white);
-  padding: 3rem 2.5rem 2.8rem;
-  position: relative;
-  overflow: hidden;
-  transition: background .3s;
-}
-
-.value-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 2px;
-  background: var(--red);
-  transition: width .4s var(--ease-out);
-}
-
-.value-card:hover { background: var(--light); }
-.value-card:hover::after { width: 100%; }
-
-.value-icon {
-  width: 52px;
-  height: 52px;
-  border: 1px solid rgba(198,156,61,0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.8rem;
-  transition: all .3s;
-}
-
-.value-card:hover .value-icon {
-  border-color: rgba(198,156,61,0.6);
-  background: rgba(198,156,61,0.06);
-}
-
-.value-card h3 {
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .07em;
-  color: var(--dark);
-  margin-bottom: 0.9rem;
-}
-
-.value-card p {
-  color: #777;
-  font-size: 0.87rem;
-  line-height: 1.78;
-}
-
-/* CTA strip */
-.about-cta {
-  background: var(--dark2);
-  padding: 6rem 5%;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-cta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(168,28,32,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.about-cta-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.about-cta h2 {
-  font-family: var(--display);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  color: var(--white);
-  line-height: .93;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  margin-bottom: 1.2rem;
-}
-
-.about-cta p {
-  color: #555;
-  font-size: 0.93rem;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
-}
-
-.about-cta-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Mobile */
-@media (max-width: 960px) {
-  .founder-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-  .founder-portrait { max-width: 400px; margin: 0 auto; width: 100%; }
-  .timeline-header { grid-template-columns: 1fr; gap: 1.5rem; }
-  .values-header { grid-template-columns: 1fr; gap: 1.5rem; }
-  .values-grid { grid-template-columns: 1fr 1fr; }
-
-  /* Collapse timeline to single column on tablet */
-  .timeline::before { left: 20px; }
-  .timeline-item { grid-template-columns: 32px 1fr; grid-template-rows: auto; }
-  .timeline-item-center { order: 1 !important; }
-  .timeline-item-left, .timeline-item-right { order: 2 !important; visibility: visible !important; padding: 0; text-align: left; grid-column: 2; }
-  .timeline-item-left { display: none; }
-  .timeline-item.left .timeline-item-right { visibility: visible; }
-  .timeline-node { margin-top: 8px; }
-}
-
-@media (max-width: 760px) {
-  .about-hero { min-height: 60svh; }
-  .values-grid { grid-template-columns: 1fr; }
-  .about-cta-actions { flex-direction: column; align-items: center; }
-  .founder-text blockquote { font-size: 0.95rem; }
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div id="progress-bar"></div>
-
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
-  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
-  <a href="index.html" class="mm-link">Home</a>
-  <a href="about.html" class="mm-link" style="color:var(--gold)">About</a>
-  <a href="products.html" class="mm-link">Products</a>
-  <a href="contact.html" class="mm-link">Contact Us</a>
-</div>
-
-<nav id="mainNav" role="navigation">
-  <div class="nav-inner">
-    <div class="nav-logo">
-      <a href="index.html"><img src="logo.png" alt="Gateway Metal Industries" onerror="this.style.display='none';"></a>
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link active">About</a></li>
-      <li><a href="products.html" class="nav-link">Products</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-    <button class="ham" id="ham" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-
-<div class="marquee-bar" aria-hidden="true">
-  <div class="marquee-inner">
-    <span>Precision Tin Fabrication</span><span class="dot">◆</span>
-    <span>FMCG &amp; Pharma</span><span class="dot">◆</span>
-    <span>Since 1975</span><span class="dot">◆</span>
-    <span>Food &amp; Spices Packaging</span><span class="dot">◆</span>
-    <span>Industrial Chemicals</span><span class="dot">◆</span>
-    <span>Worldwide Shipping</span><span class="dot">◆</span>
-    <span>Precision Tin Fabrication</span><span class="dot">◆</span>
-    <span>FMCG &amp; Pharma</span><span class="dot">◆</span>
-  </div>
-</div>
-
-<!-- ═══════════ ABOUT HERO ═══════════ -->
-<header class="about-hero">
-  <div class="hero-noise" aria-hidden="true"></div>
-  <div class="about-hero-accent" aria-hidden="true"></div>
-  <div class="about-hero-glow" aria-hidden="true"></div>
-  <span class="about-hero-year" aria-hidden="true">1975</span>
-
-  <div class="about-hero-inner max-w reveal">
-    <p class="section-tag">Our Heritage</p>
-    <h1>Built on<br><em>Craft.</em><br>Driven by<br><em>Trust.</em></h1>
-    <div class="about-hero-line"></div>
-    <p class="about-hero-lead">For over fifty years, Gateway Metal Industries has done one thing — made containers that hold up. To pressure. To time. To the relentless demands of industry. This is how we got here.</p>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Gateway Metal Industries, home"><img src="img/gmi.svg" alt="" width="66" height="26"><span>Gateway Metal<br>Industries</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="products.html">Catalogue</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="quote-pill" href="contact.html#quote">Quote list <b data-quote-count>0</b></a>
+    <a class="btn btn--red btn--sm btn--wa-head" href="https://wa.me/917738486780" target="_blank" rel="noopener">WhatsApp us</a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span></span></button>
   </div>
 </header>
 
-<!-- ═══════════ FOUNDER ═══════════ -->
-<section class="founder-section">
-  <div class="founder-grid">
-
-    <div class="founder-portrait reveal-left">
-      <div class="founder-portrait-bracket"></div>
-      <div class="founder-portrait-frame">
-        <img src="founder.jpg" alt="Ismail Sulemanji Patrawala, Founder" onload="this.classList.add('loaded')" onerror="this.style.display='none'">
-        <!-- Fallback when no founder photo is available -->
-        <div class="founder-placeholder">
-          <span class="founder-placeholder-year">1975</span>
-          <svg class="founder-placeholder-icon" width="64" height="64" fill="none" viewBox="0 0 64 64">
-            <rect x="10" y="20" width="44" height="32" rx="1" stroke="#C69C3D" stroke-width="1.5"/>
-            <rect x="20" y="10" width="24" height="12" stroke="#C69C3D" stroke-width="1.5"/>
-            <line x1="32" y1="20" x2="32" y2="52" stroke="#C69C3D" stroke-width="1.5"/>
-            <line x1="10" y1="36" x2="54" y2="36" stroke="#C69C3D" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <div class="founder-portrait-label">
-          <strong>Ismail Sulemanji Patrawala</strong>
-          <span>Founder · Gateway Metal Industries</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="founder-text reveal-right">
-      <p class="section-tag">The Beginning</p>
-      <h2 class="section-title">A Workshop.<br>A Vision.<br>A Promise.</h2>
-      <div class="founder-divider"></div>
-
-      <p>In 1975, in a modest workshop tucked inside Mumbai's Lower Parel — then the beating industrial heart of Maharashtra — Ismail Sulemanji Patrawala set up a bench, a press, and a belief that would outlast generations. The belief that a container is never just a container. It is a promise: that what is inside will arrive exactly as it left.</p>
-
-      <blockquote>"The tin doesn't carry the product. It carries the maker's reputation."</blockquote>
-
-      <p>That philosophy was not a slogan. It shaped every decision — the gauge of tinplate chosen, the tightness of a seam, the precision of a lid. In an era when cutting corners was commonplace, Gateway became known as the manufacturer that simply refused to.</p>
-
-      <p>Word spread quietly, the way it does when quality speaks for itself. Spice traders. Chemical manufacturers. Pharmaceutical distributors. Each came looking for a tin that would not fail them. Each left with a long-term partner.</p>
-    </div>
-
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="sheet-top">
+    <img src="img/gmi.svg" alt="Gateway Metal Industries" width="66" height="26">
+    <button class="sheet-close" type="button" aria-label="Close menu">×</button>
   </div>
-</section>
-
-<!-- ═══════════ TIMELINE ═══════════ -->
-<section class="timeline-section">
-  <div class="timeline-header reveal">
-    <div>
-      <p class="section-tag">Five Decades</p>
-      <h2>The Road<br>Here</h2>
-    </div>
-    <p>Every milestone in our history reflects the same discipline — grow without compromising the quality that got us here in the first place.</p>
+  <nav aria-label="Mobile">
+    <a href="index.html">Home <small>Start</small></a>
+    <a href="products.html">Catalogue <small>19 tins</small></a>
+    <a href="about.html" aria-current="page">About <small>Since 1975</small></a>
+    <a href="contact.html">Contact <small>Get a quote</small></a>
+  </nav>
+  <div class="sheet-foot">
+    <a class="btn btn--red" href="https://wa.me/917738486780" target="_blank" rel="noopener">WhatsApp +91 77384 86780</a>
+    <a class="btn" href="tel:+917738486780">Call us</a>
   </div>
+</div>
 
-  <div class="timeline max-w">
+<main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">About Gateway</p>
+      <h1 class="display">Fifty years of making tins. Still a family business.</h1>
+    </div>
+  </header>
 
-    <div class="timeline-item left reveal">
-      <div class="timeline-item-left">
-        <div class="timeline-content">
-          <div class="timeline-year">1975</div>
-          <div class="timeline-title">The Founding</div>
-          <p class="timeline-body">Ismail Sulemanji Patrawala establishes Gateway Metal Industries in Lower Parel, Mumbai. The first products: bespoke tin containers for local spice and food colouring merchants who demand airtight quality on a budget that punishes failure.</p>
+  <section class="band">
+    <div class="wrap story">
+      <aside class="story-side">
+        <div class="founder-card">
+          <div class="mark"><small>Founded</small><span>1975</span></div>
+          <div class="who"><b>Ismail Sulemanji Patrawala</b><span>Founder, Gateway Metal Industries</span></div>
+        </div>
+      </aside>
+      <div class="prose">
+        <p class="first">Gateway Metal Industries started in 1975 as a small workshop in Lower Parel, Mumbai, making tin containers for local spice merchants.</p>
+        <p>Ismail Sulemanji Patrawala set it up with one idea that still runs the place: a tin carries more than the product inside it. If a seam splits or a lid won’t hold, it’s the brand on the label that takes the hit.</p>
+        <p>Over the years the customers changed, from spice traders to paint and adhesive makers, dye and chemical companies and FMCG brands, and the range grew with them. In 2009 production moved to larger works in Taloja MIDC, Navi Mumbai, where every Gateway tin is made today.</p>
+        <p>When you call us, you speak to the people who run the factory.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--tin">
+    <div class="wrap">
+      <div class="band-head">
+        <div>
+          <p class="eyebrow">Timeline</p>
+          <h2 class="h2">How we got here.</h2>
         </div>
       </div>
-      <div class="timeline-item-center"><div class="timeline-node"></div></div>
-      <div class="timeline-item-right"></div>
+      <div class="timeline">
+        <div class="t-row rise"><b>1975</b><h3 class="h3">Founded in Lower Parel</h3><p>A workshop in Mumbai’s mill district. The first tins go to spice and food-colour merchants.</p></div>
+        <div class="t-row rise"><b>1990s</b><h3 class="h3">Into industrial tins</h3><p>Tins for dyes, adhesives and solvents, where a weak seam is not an option.</p></div>
+        <div class="t-row rise"><b>2000s</b><h3 class="h3">Bigger runs</h3><p>Larger orders of cookie tins, curry powder boxes and specialty containers for FMCG brands.</p></div>
+        <div class="t-row rise"><b>2009</b><h3 class="h3">Move to Taloja</h3><p>Production moves to larger works at A87, MIDC Taloja, Navi Mumbai.</p></div>
+        <div class="t-row rise"><b>Today</b><h3 class="h3">19 standard sizes</h3><p>Round, square and rectangular tins from 50 ml to 1 kg, plus custom sizes to order.</p></div>
+      </div>
     </div>
+  </section>
 
-    <div class="timeline-item right reveal">
-      <div class="timeline-item-left"></div>
-      <div class="timeline-item-center"><div class="timeline-node"></div></div>
-      <div class="timeline-item-right">
-        <div class="timeline-content">
-          <div class="timeline-year">1990s</div>
-          <div class="timeline-title">Industrial Expansion</div>
-          <p class="timeline-body">The reputation for zero-defect seams attracts India's growing industrial chemicals sector. Gateway begins producing heavy-duty tins for dyes, adhesives, and solvents — products that punish poor packaging mercilessly. Every unit holds.</p>
+  <section class="band">
+    <div class="wrap">
+      <blockquote class="mission rise">
+        To make high-quality tin boxes through efficient, responsible manufacturing, and give brands durable, recyclable packaging they can rely on.
+        <cite>Our mission</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="band-head">
+        <div>
+          <p class="eyebrow">How we work</p>
+          <h2 class="h2">Three things we hold to.</h2>
         </div>
       </div>
-    </div>
-
-    <div class="timeline-item left reveal">
-      <div class="timeline-item-left">
-        <div class="timeline-content">
-          <div class="timeline-year">2000s</div>
-          <div class="timeline-title">FMCG &amp; Scale</div>
-          <p class="timeline-body">India's FMCG boom creates demand for high-volume, branded packaging. Gateway invests in new tooling and takes on its first national-scale contracts — producing millions of cookie tins, curry powder boxes, and specialty containers per year without a single compromise in tolerance.</p>
-        </div>
-      </div>
-      <div class="timeline-item-center"><div class="timeline-node"></div></div>
-      <div class="timeline-item-right"></div>
-    </div>
-
-    <div class="timeline-item right reveal">
-      <div class="timeline-item-left"></div>
-      <div class="timeline-item-center"><div class="timeline-node"></div></div>
-      <div class="timeline-item-right">
-        <div class="timeline-content">
-          <div class="timeline-year">2009</div>
-          <div class="timeline-title">Taloja — A New Era</div>
-          <p class="timeline-body">Anticipating the next decade of growth, Gateway relocates to a purpose-built facility in Taloja, Maharashtra. Automated production lines, expanded tooling capacity, and a modern quality-assurance lab allow us to serve global supply chains while maintaining the handcrafted precision our clients have always depended on.</p>
-        </div>
+      <div class="principles rise">
+        <div><h3 class="h3">Tins that hold</h3><p>Seams, lids and finish are what we check before a tin leaves Taloja. That standard was set in 1975 and it hasn’t moved.</p></div>
+        <div><h3 class="h3">Straight answers</h3><p>If a size, quantity or date isn’t workable, we tell you at the quote stage, not after the order is placed.</p></div>
+        <div><h3 class="h3">Long relationships</h3><p>Most of our work is repeat orders. We’d rather keep a customer for years than win a single big run.</p></div>
       </div>
     </div>
+  </section>
 
-    <div class="timeline-item left reveal">
-      <div class="timeline-item-left">
-        <div class="timeline-content">
-          <div class="timeline-year">Today</div>
-          <div class="timeline-title">Fifty Years Strong</div>
-          <p class="timeline-body">Gateway Metal Industries stands as one of India's premier tin packaging manufacturers — serving clients across food, pharma, FMCG, and industrial sectors, shipping worldwide. The workshop in Lower Parel is gone. The standard it set is not.</p>
-        </div>
+  <section class="band band--ink">
+    <div class="wrap cta">
+      <div>
+        <p class="eyebrow">Work with us</p>
+        <h2 class="h2">Tell us the size. We’ll send you a price.</h2>
       </div>
-      <div class="timeline-item-center"><div class="timeline-node"></div></div>
-      <div class="timeline-item-right"></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════ VALUES ═══════════ -->
-<section class="values-section">
-  <div class="values-header reveal">
-    <div>
-      <p class="section-tag">What We Stand For</p>
-      <h2>The Principles<br>That Have<br>Never Changed</h2>
-    </div>
-    <p>Fifty years of business teaches you what actually matters. For us, it has always come down to three things. We have never found a reason to add a fourth.</p>
-  </div>
-
-  <div class="values-grid max-w">
-
-    <div class="value-card reveal reveal-delay-1">
-      <div class="value-icon">
-        <svg width="26" height="26" fill="none" viewBox="0 0 32 32">
-          <circle cx="16" cy="16" r="12" stroke="#C69C3D" stroke-width="1.5"/>
-          <polyline points="10,16 14,20 22,12" stroke="#C69C3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <div class="cta-lines">
+        <a href="https://wa.me/917738486780" target="_blank" rel="noopener"><span class="label">WhatsApp</span><span>+91 77384 86780</span></a>
+        <a href="tel:+917738486780"><span class="label">Call</span><span>+91 77384 86780</span></a>
+        <a href="mailto:sales@gatewaymetalindustries.com"><span class="label">Email</span><span>sales@gatewaymetalindustries.com</span></a>
+        <a href="products.html"><span class="label">Browse</span><span>All 19 standard tins</span></a>
       </div>
-      <h3>Uncompromising Quality</h3>
-      <p>Every container that leaves our facility has passed the same rigorous seam, leak, and dimensional checks we set in 1975. Volume has grown. The standard has not moved an inch.</p>
     </div>
+  </section>
+</main>
 
-    <div class="value-card reveal reveal-delay-2">
-      <div class="value-icon">
-        <svg width="26" height="26" fill="none" viewBox="0 0 32 32">
-          <rect x="4" y="8" width="24" height="18" rx="1" stroke="#C69C3D" stroke-width="1.5"/>
-          <polyline points="4,14 16,20 28,14" stroke="#C69C3D" stroke-width="1.5"/>
-        </svg>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="brand-foot">
+        <img src="img/gmi.svg" alt="Gateway Metal Industries" width="71" height="28">
+        <p>Tinplate containers for spices, paints and chemicals. Making tins since 1975.</p>
       </div>
-      <h3>Radical Reliability</h3>
-      <p>Our clients build production schedules around our delivery commitments. That trust is sacred. We have never shipped a late order without first warning the client — and we intend to keep it that way.</p>
-    </div>
-
-    <div class="value-card reveal reveal-delay-3">
-      <div class="value-icon">
-        <svg width="26" height="26" fill="none" viewBox="0 0 32 32">
-          <path d="M16 4 L20 12 L29 13 L22 20 L24 29 L16 25 L8 29 L10 20 L3 13 L12 12 Z" stroke="#C69C3D" stroke-width="1.5" stroke-linejoin="round"/>
-        </svg>
+      <div>
+        <h2>Catalogue</h2>
+        <ul>
+          <li><a href="products.html?use=spice">Spices &amp; food</a></li>
+          <li><a href="products.html?use=paint">Paints &amp; adhesives</a></li>
+          <li><a href="products.html?use=chemical">Dyes &amp; chemicals</a></li>
+          <li><a href="products.html?use=general">General purpose</a></li>
+        </ul>
       </div>
-      <h3>Long-Term Partnership</h3>
-      <p>We do not think in transactions. We think in relationships. The most important measure of our success is not the volume we ship — it is how many clients have been with us for a decade or more.</p>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#quote">Your quote list</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Works</h2>
+        <p>A87, MIDC Taloja<br>Panvel, Maharashtra 410208</p>
+        <p style="margin-top:8px">Mon–Sat, 9:00–18:00 IST</p>
+      </div>
     </div>
-
-  </div>
-</section>
-
-<!-- ═══════════ ABOUT CTA ═══════════ -->
-<section class="about-cta">
-  <div class="about-cta-inner reveal">
-    <p class="section-tag" style="color: var(--gold);">Work with us</p>
-    <h2>You Have High Standards.<br>So Do We.</h2>
-    <p>If you need a tin packaging partner who will treat your product with the same care you do — let's talk. We respond to every inquiry within 24 hours.</p>
-    <div class="about-cta-actions">
-      <a href="contact.html" class="btn-gold">Request a Quote</a>
-      <a href="products.html" class="btn-outline">View the Catalog</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo"><img src="logo.png" alt="Gateway Metal Industries" onerror="this.style.display='none';"></div>
-    <p class="footer-copy">© 2026 Gateway Metal Industries. All Rights Reserved.<br>Precision Tin Fabrication Since 1975</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a><a href="about.html">Company</a><a href="products.html">Products</a><a href="contact.html">Contact</a>
+    <div class="foot-base">
+      <span>© <span data-year>2026</span> Gateway Metal Industries</span>
+      <span>Taloja · Navi Mumbai · India</span>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/917738486780" class="wa-btn" target="_blank" aria-label="Chat on WhatsApp">
-  <div class="wa-pulse"></div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28" fill="currentColor">
-    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.3c-32.6 0-64.6-8.8-92.6-25.4l-6.6-3.9-68.8 18 18.4-67.1-4.3-6.8c-18.2-28.9-27.8-62.4-27.8-96.2 0-103.1 84-187.1 187.3-187.1 50 0 96.9 19.5 132.3 54.8 35.4 35.3 54.8 82.3 54.8 132.4 0 103.2-84.1 187.1-187.3 187.3zm101.8-139.7c-5.6-2.8-33-16.3-38.1-18.1-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.4 18.1-17.7 21.8-3.3 3.7-6.5 4.2-12.1 1.4-5.6-2.8-23.5-8.7-44.8-27.8-16.5-14.8-27.6-33.1-30.9-38.6-3.3-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.6-6.5 8.4-9.8 2.8-3.3 3.7-5.6 5.6-9.3 1.9-3.7.9-7-5-12.6-5.6-5.6-12.5-31.5-17.2-43.1-4.5-11.3-9.1-9.8-12.5-9.9-3.3-.1-7.1-.1-10.9-.1-3.7 0-9.8 1.4-14.9 7-5.1 5.6-19.5 19.1-19.5 46.5s20 53.8 22.8 57.5c2.8 3.7 39.2 59.8 95 83.9 13.3 5.7 23.7 9.1 31.8 11.6 13.4 4.3 25.6 3.7 35.3 2.2 10.9-1.7 33-13.5 37.6-26.5 4.7-13 4.7-24.1 3.3-26.5-1.4-2.4-5.1-3.7-10.7-6.5z"/>
-  </svg>
-</a>
-
-<script>
-const prog = document.getElementById('progress-bar');
-window.addEventListener('scroll', () => {
-  const max = document.documentElement.scrollHeight - window.innerHeight;
-  prog.style.width = (max > 0 ? (document.documentElement.scrollTop / max * 100) : 0) + '%';
-}, { passive: true });
-
-const ham = document.getElementById('ham'), mobileMenu = document.getElementById('mobileMenu');
-let menuOpen = false;
-function openMenu() { menuOpen = true; mobileMenu.style.display = 'flex'; requestAnimationFrame(() => mobileMenu.classList.add('open')); ham.classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeMenu() { menuOpen = false; mobileMenu.classList.remove('open'); ham.classList.remove('open'); document.body.style.overflow = ''; setTimeout(() => { if (!menuOpen) mobileMenu.style.display = 'none'; }, 400); }
-ham.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
-document.getElementById('mobileClose').addEventListener('click', closeMenu);
-document.querySelectorAll('.mm-link').forEach(el => el.addEventListener('click', closeMenu));
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) closeMenu(); });
-
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
-}, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObserver.observe(el));
-</script>
+<script src="assets/products.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>
